@@ -1,0 +1,57 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #0a0a15 0%, #1a1a2e 50%, #16213e 100%);
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: linear-gradient(45deg, #00ff88, #00ccff, #ff44ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  margin: 30px 0;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(0, 255, 136, 0.5));
+  }
+  to {
+    filter: drop-shadow(0 0 20px rgba(0, 255, 136, 0.8));
+  }
+}
+
+canvas {
+  background: linear-gradient(to bottom, #14141e 0%, #1a1a28 100%);
+  border: 3px solid #4488ff;
+  border-radius: 8px;
+  box-shadow: 
+    0 0 20px rgba(68, 136, 255, 0.4),
+    0 0 40px rgba(68, 136, 255, 0.2),
+    inset 0 0 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+canvas:hover {
+  box-shadow: 
+    0 0 30px rgba(68, 136, 255, 0.6),
+    0 0 60px rgba(68, 136, 255, 0.3),
+    inset 0 0 60px rgba(0, 0, 0, 0.4);
+  border-color: #6699ff;
+}
